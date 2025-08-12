@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>VideoStream</h1>
+  <header>
+            <h1>VideoStream</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -17,33 +17,31 @@
                 <li><a href="#">Categories</a></li>
             </ul>
         </nav>
-    </header>
+  </header>
+  
+  <main class="watch-container">
+    <div class="video-player">
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
+      <iframe id="videoFrame" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+    </div>
     
-    <main class="watch-container">
-        <div class="video-player">
-            <iframe id="videoFrame" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
-        </div>
-        
-        <div class="video-info">
-            <h1 id="videoTitle">Loading...</h1>
-            <div class="meta-data">
-                <span id="releaseYear"></span>
-                <span id="genre"></span>
-                <span id="rating"></span>
-            </div>
-            <p id="description"></p>
-        </div>
-        
-        <div class="episodes" id="episodesContainer">
-            <h2>Episodes</h2>
-            <!-- Episodes will be loaded here by video.js -->
-        </div>
-    </main>
+    <div class="video-info">
+      <h1 id="videoTitle">Loading...</h1>
+    </div>
     
-    <footer>
-        <p>&copy; 2023 VideoStream. All rights reserved.</p>
-    </footer>
-    
-    <script src="video.js"></script>
+    <div class="episodes" id="episodesContainer">
+      <h2>Episodes</h2>
+      <div class="loading">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 DramaStream. All rights reserved.</p>
+  </footer>
+  
+  <script src="video.js"></script>
 </body>
-</html>
