@@ -1,28 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
     const videoGrid = document.getElementById('videoGrid');
     
-    // Fetch video list from JSON
     fetch('video-list.json')
         .then(response => response.json())
-        .then(videos => {
-            videos.forEach(video => {
+        .then(dramas => {
+            dramas.forEach(drama => {
                 const videoCard = document.createElement('div');
                 videoCard.className = 'video-card';
                 videoCard.innerHTML = `
-                    <img src="${video.thumbnail}" alt="${video.title}" class="video-thumbnail">
-                    <div class="video-title">${video.title}</div>
-                    <div class="video-meta">${video.year} • ${video.genre}</div>
+                    <img src="${drama.thumbnail}" alt="${drama.title}" class="video-thumbnail">
+                    <div class="video-title">${drama.title}</div>
                 `;
                 
                 videoCard.addEventListener('click', () => {
-                    window.location.href = `watch.html?id=${video.id}`;
+                    window.location.href = `watch.html?id=${drama.id}`;
                 });
                 
                 videoGrid.appendChild(videoCard);
             });
         })
         .catch(error => {
-            console.error('Error loading video list:', error);
-            videoGrid.innerHTML = '<p>Error loading videos. Please try again later.</p>';
+            console.error('Error loading drama list:', error);
+            videoGrid.innerHTML = '<p>Error loading dramas. Please try again later.</p>';
         });
 });
