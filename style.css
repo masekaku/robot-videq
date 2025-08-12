@@ -1,0 +1,167 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1a1a2e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #e2e2e2;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #4a4a6a;
+    color: #ffffff;
+}
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #1a1a2e;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Homepage Styles */
+.featured {
+    margin-bottom: 3rem;
+}
+
+.featured h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #e2e2e2;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-card {
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.video-title {
+    padding: 1rem;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Watch Page Styles */
+.watch-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-player {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.meta-data {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #a1a1a1;
+}
+
+.episodes {
+    margin-top: 2rem;
+}
+
+.episodes h2 {
+    margin-bottom: 1rem;
+}
+
+.episode-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.episode-card {
+    background-color: #1a1a2e;
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.episode-card:hover {
+    background-color: #2a2a3e;
+}
+
+.episode-card.active {
+    background-color: #4a4a6a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
