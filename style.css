@@ -1,172 +1,252 @@
-/* Modern CSS Improvements */
+/* Modern CSS with Black & Orange Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --primary: #4361ee;
-  --primary-dark: #3a0ca3;
-  --secondary: #f72585;
-  --dark: #1a1a2e;
-  --darker: #0f0f1a;
-  --light: #f8f9fa;
-  --gray: #6c757d;
+  --primary: #FF7A00;
+  --primary-dark: #E56D00;
+  --primary-light: #FF9E40;
+  --dark: #0A0A0A;
+  --darker: #000000;
+  --light: #FFFFFF;
+  --gray: #2A2A2A;
+  --text-primary: #F5F5F5;
+  --text-secondary: #CCCCCC;
 }
 
-/* Enhanced Base Styles */
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--darker);
-  color: var(--light);
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
 }
 
-/* Improved Header */
+/* Improved Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Enhanced Header */
 header {
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background-color: var(--dark);
   padding: 1rem 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(255, 122, 0, 0.2);
 }
 
-/* Modern Navigation */
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  list-style: none;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  transition: all 0.3s ease;
+  color: var(--text-secondary);
   font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-nav a:hover, nav a.active {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+nav a:hover,
+nav a.active {
+  color: var(--primary);
 }
 
-/* Enhanced Video Cards */
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+/* Modern Video Grid */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
 }
 
 .video-card {
-  background: var(--dark);
-  border-radius: 12px;
+  background-color: var(--dark);
+  border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  aspect-ratio: 16/9;
+  border: 1px solid var(--gray);
 }
 
 .video-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 122, 0, 0.1);
+  border-color: var(--primary-light);
 }
 
 .video-thumbnail {
   width: 100%;
-  height: 100%;
+  height: 160px;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.video-card:hover .video-thumbnail {
-  transform: scale(1.03);
+  display: block;
 }
 
 .video-title {
-  padding: 1.2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Modern Video Player Page */
+/* Watch Page Styles */
 .watch-container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .video-player {
-  border-radius: 12px;
+  background-color: #000;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem;
-  background: black;
+  aspect-ratio: 16/9;
 }
 
-/* Improved Episode List */
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.video-info {
+  margin-bottom: 2rem;
+}
+
+.video-info h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+/* Episode List */
+.episodes h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
 .episode-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .episode-card {
-  background: var(--dark);
-  padding: 1rem;
-  border-radius: 8px;
+  background-color: var(--dark);
+  padding: 0.8rem;
+  border-radius: 6px;
   text-align: center;
+  font-weight: 500;
   transition: all 0.2s ease;
-  border: 2px solid transparent;
+  border: 1px solid var(--gray);
 }
 
 .episode-card:hover {
-  background: rgba(67, 97, 238, 0.1);
-  border-color: var(--primary);
+  background-color: rgba(255, 122, 0, 0.1);
+  border-color: var(--primary-light);
 }
 
 .episode-card.active {
-  background: var(--primary);
-  color: white;
-  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--darker);
+  font-weight: 600;
+  border-color: var(--primary);
 }
 
-/* Loading States */
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+/* Footer */
+footer {
+  background-color: var(--dark);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 122, 0, 0.2);
 }
 
-.spinner {
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  border-top: 4px solid var(--primary);
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Responsive Improvements */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .video-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  header {
     padding: 1rem;
   }
-  
-  .watch-container {
-    padding: 0 1rem;
+
+  nav ul {
+    gap: 1rem;
+    font-size: 0.9rem;
   }
-  
-  .video-player iframe {
-    height: 300px;
+
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .watch-container {
+    padding: 1rem;
+  }
+
+  .video-player {
+    margin-bottom: 1.5rem;
+  }
+
+  .video-info h1 {
+    font-size: 1.4rem;
+  }
+
+  .episode-list {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .video-thumbnail {
+    height: 120px;
+  }
+
+  .video-title {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .episode-list {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .episode-card {
+    padding: 0.6rem;
+    font-size: 0.9rem;
   }
 }
