@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "The Great Adventure",
+        "thumbnail": "https://via.placeholder.com/300x169?text=The+Great+Adventure",
+        "year": 2022,
+        "genre": "Action, Adventure",
+        "detailFile": "video-detail-1.json"
+    },
+    {
+        "id": 2,
+        "title": "Mystery of the Lost City",
+        "thumbnail": "https://via.placeholder.com/300x169?text=Mystery+of+the+Lost+City",
+        "year": 2021,
+        "genre": "Mystery, Thriller",
+        "detailFile": "video-detail-2.json"
+    },
+    {
+        "id": 3,
+        "title": "Love in Paris",
+        "thumbnail": "https://via.placeholder.com/300x169?text=Love+in+Paris",
+        "year": 2023,
+        "genre": "Romance, Drama",
+        "detailFile": "video-detail-3.json"
+    },
+    {
+        "id": 4,
+        "title": "Sci-Fi Chronicles",
+        "thumbnail": "https://via.placeholder.com/300x169?text=Sci-Fi+Chronicles",
+        "year": 2020,
+        "genre": "Sci-Fi, Action",
+        "detailFile": "video-detail-4.json"
+    }
+]
