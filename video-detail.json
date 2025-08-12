@@ -1,29 +1,29 @@
-{
-    "id": 1,
-    "title": "The Great Adventure",
-    "description": "Join our heroes as they embark on an epic journey through uncharted territories, facing challenges and discovering hidden treasures.",
-    "year": 2022,
-    "genre": "Action, Adventure",
-    "rating": "PG-13",
-    "thumbnail": "https://via.placeholder.com/800x450?text=The+Great+Adventure",
+[
+  {
+    "id": "drama1",
+    "title": "Putri Duyung Abadi",
     "episodes": [
-        {
-            "id": "e1",
-            "title": "The Journey Begins",
-            "thumbnail": "https://via.placeholder.com/300x169?text=Episode+1",
-            "duration": "45 min"
-        },
-        {
-            "id": "e2",
-            "title": "The Dark Forest",
-            "thumbnail": "https://via.placeholder.com/300x169?text=Episode+2",
-            "duration": "48 min"
-        },
-        {
-            "id": "e3",
-            "title": "The Final Challenge",
-            "thumbnail": "https://via.placeholder.com/300x169?text=Episode+3",
-            "duration": "52 min"
-        }
+      { "episode": 1, "videoId": "vid001" },
+      { "episode": 2, "videoId": "vid002" },
+      { "episode": 3, "videoId": "vid003" }
     ]
-}
+  },
+  {
+    "id": "drama2",
+    "title": "Cinta Segitiga",
+    "episodes": [
+      { "episode": 1, "videoId": "vid004" },
+      { "episode": 2, "videoId": "vid005" }
+    ]
+  },
+  {
+    "id": "drama3",
+    "title": "Petualangan Seru",
+    "episodes": [
+      { "episode": 1, "videoId": "vid006" },
+      { "episode": 2, "videoId": "vid007" },
+      { "episode": 3, "videoId": "vid008" },
+      { "episode": 4, "videoId": "vid009" }
+    ]
+  }
+]
