@@ -1,10 +1,11 @@
-{
-    "e1": "https://d-s.io/e/j9uph9rnrh5u",
-    "e2": "https://d-s.io/e/cv0cdgb3h9kb",
-    "e3": "https://d-s.io/e/uxyypkd9nhyn",
-    "e4": "https://d-s.io/e/1kzaglg5js4t",
-    "e5": "https://d-s.io/e/q0nl9gi7p51n",
-    "e6": "https://d-s.io/e/o141566d4zi9",
-    "e7": "https://d-s.io/e/y71by76jui4k",
-    "e8": "https://d-s.io/e/zchlfdklay5w"
-}
+[
+  { "id": "vid001", "url": "http://bit.ly/47hESyw" },
+  { "id": "vid002", "url": "http://bit.ly/47hESyw" },
+  { "id": "vid003", "url": "https://qu.ax/yOpJY.mp4" },
+  { "id": "vid004", "url": "https://example.com/videos/cinta-ep1.mp4" },
+  { "id": "vid005", "url": "https://example.com/videos/cinta-ep2.mp4" },
+  { "id": "vid006", "url": "https://example.com/videos/petualangan-ep1.mp4" },
+  { "id": "vid007", "url": "https://example.com/videos/petualangan-ep2.mp4" },
+  { "id": "vid008", "url": "https://example.com/videos/petualangan-ep3.mp4" },
+  { "id": "vid009", "url": "https://example.com/videos/petualangan-ep4.mp4" }
+]
